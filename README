@@ -1,8 +1,9 @@
 Game CV
 ------------
 
-This is an HTML5 'game' (currently not very fun unfortunately), written in javascript, using the 'canvas'
-element.  It should work in virtually all modern browsers.
+This is an HTML5 'game' (currently not very fun unfortunately) version
+of the CV or Resume document, written in javascript, using the HTML5
+'canvas' element.  It should work in virtually all modern browsers.
 
 Credits
 -------
