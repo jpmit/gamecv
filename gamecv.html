@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link href="gamecv.css" type="text/css" rel="stylesheet" />
+  <title>Game CV</title>
+  </head>
+
+  <body>
+    <div id="topbar">
+      <h1>Game CV</h1>
+		<span>Use the arrow keys to move and press space to shoot a CV category when it appears!</span>
+    </div>
+    <div id="text">
+      Dummy CV text
+    </div>
+    <div id="loader">
+      <h3 class="load">Loading</h3>
+      <img src="images/load.gif" alt="" />
+    </div>
+    <div id="container">
+	   <canvas id="game"></canvas>
+    </div>
+    <!-- TODO: fix loading order / initialisation -->
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="game.js"></script>
+    <script src="rect.js"></script>
+    <script src="background.js"></script>
+    <script src="key.js"></script>
+    <script src="sprites.js"></script>
+    <script src="cvdata.js"></script>
+    <script src="text.js"></script>
+    <script src="screen.js"></script>
+    <script src="main.js"></script>
+    <script src="objects.js"></script>
+    <script src="jukebox.js"></script>
+    <script>
+      window.onload = function() {
+          game.main.init();
+      };
+    </script>
+  </body>
+</html>

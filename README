@@ -1,0 +1,12 @@
+Game CV
+------------
+
+This is an HTML5 'game' (currently not very fun unfortunately), written in javascript, using the 'canvas'
+element.  It should work in virtually all modern browsers.
+
+Credits
+-------
+
+SpaceShip images are from open game art and provided under the GPL 3.0:
+http://opengameart.org/content/spaceship-set-4-pixel-art-space-ships
+
