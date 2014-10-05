@@ -6,37 +6,37 @@
 /*global game*/
 /*jslint browser:true*/
 
-var screen = game.namespace('screen');
+game.namespace('screen');
 
 // the main context used by the game for drawing
-screen.canvas = document.getElementById("game");
-screen.ctx = screen.canvas.getContext('2d');
+game.screen.canvas = document.getElementById("game");
+game.screen.ctx = game.screen.canvas.getContext('2d');
 // canvas co-ords of the top left (xmin, ymin) and bottom right (xmax,
 // ymax) points of the canvas corresponding to the play area.
-screen.xmin = game.constants.wallWidth;
-screen.ymin = game.constants.wallWidth;
+game.screen.xmin = game.constants.wallWidth;
+game.screen.ymin = game.constants.wallWidth;
 // xmax and ymax can change as the user resizes the window!
-screen.xmax = null;
-screen.ymax = null;
+game.screen.xmax = null;
+game.screen.ymax = null;
 
-screen.setCanvasSize = function () {
-    var c = screen.canvas,
+game.screen.setCanvasSize = function () {
+    var c = game.screen.canvas,
         ww = game.constants.wallWidth;
 
     c.width = window.innerWidth;
     c.height = 0.9 * window.innerHeight;
-    screen.width = c.width;
-    screen.height = c.height;
+    game.screen.width = c.width;
+    game.screen.height = c.height;
 
-    screen.ctx = c.getContext('2d');
+    game.screen.ctx = c.getContext('2d');
 
-    screen.xmax = c.width - ww;
-    screen.ymax = c.height - ww;
+    game.screen.xmax = c.width - ww;
+    game.screen.ymax = c.height - ww;
 
     // reset canvas details
-    screen.ctx.fillStyle = '#FFF';
-    screen.ctx.strokeStyle = '#FFF';
-    screen.ctx.font = "20px Monospace";
+    game.screen.ctx.fillStyle = '#FFF';
+    game.screen.ctx.strokeStyle = '#FFF';
+    game.screen.ctx.font = "20px Monospace";
 
     // re-create the background
     game.background.create(c.width, c.height);
@@ -49,8 +49,8 @@ screen.setCanvasSize = function () {
 };
 
 // called by game once loading complete
-screen.showCanvas = function () {
-    screen.canvas.style.display = 'block';
+game.screen.showCanvas = function () {
+    game.screen.canvas.style.display = 'block';
 };
 
-window.onresize = screen.setCanvasSize;
+window.onresize = game.screen.setCanvasSize;
